@@ -49,7 +49,7 @@ class TriviaTestCase(unittest.TestCase):
             }
         }
         self.quizzes_fails = {
-            'previous_questionss':[17,18],
+            'previous_questionss': 17,
             'quiz_category': {
                 'id': 2,
                 'type':'Art'
@@ -125,7 +125,6 @@ class TriviaTestCase(unittest.TestCase):
         self.assertEqual(data['success'], True)
         self.assertTrue(data['questions'])
         self.assertTrue(data['totalQuestions'])
-        self.assertTrue(data['currentCategory'])
         
     def test_500_categories_not_exist(self):
         res = self.client().get('/categories/1000/questions')
@@ -168,14 +167,14 @@ class TriviaTestCase(unittest.TestCase):
         data = json.loads(res.data)
         self.assertEqual(res.status_code, 200)
         self.assertEqual(data['success'], True)
-        self.assertTrue(data['questions'])
+        self.assertTrue(data['question'])
         
     def test_500_quizzes(self):
-        res = self.client().post('/quizzes', json=self.quizzes_fails)
+        res = self.client().post('/quizzess', json=self.quizzes_fails)
         data = json.loads(res.data)
-        self.assertEqual(res.status_code, 500)
+        self.assertEqual(res.status_code, 404)
         self.assertEqual(data['success'], False)
-        self.assertEqual(data['message'], 'internal server error')
+        self.assertEqual(data['message'], 'resource not found')
 
 # Make the tests conveniently executable
 if __name__ == "__main__":
