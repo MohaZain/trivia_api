@@ -197,7 +197,7 @@ def create_app(test_config=None):
           # quesz_question = {}
           body = request.get_json()
           
-          previous_questions = body.get('previous_questions', [])
+          previous_questions = body.get('previous_questions')
           
           quiz_category = body.get('quiz_category')
           quiz_category = quiz_category['id']
