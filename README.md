@@ -2,14 +2,15 @@
 
 ### Interductions
 
-This the second project from udacity FullStack nanodegree is website thets allow to create question with categories,
-and quezz your self with these Various questions,
+This the second project from udacity FullStack nanodegree, 
+a website thet's give you the ablity to create questions with categories,
+and queiz your self with these Various questions.
 
 The main focus for the student is to complate the backend section,
 - Design complate [API](https://medium.com/swlh/the-flavours-of-apis-c13552799645)
-- Test diffrent senario with each Endpoing.
+- Test diffrent senario with each Endpoint.
 
-now for the rest of this Document, follow the each section to help you download the project also runnit in your local server 
+now for the rest of this Document, follow each section to help you download the project also runnit in your local server 
 to explore the website. 
 
 Enjoye 
